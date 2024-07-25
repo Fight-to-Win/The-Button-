@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számláló és Feliratkozás</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Fekete háttér */
+            color: white; /* Fehér szöveg */
+        }
+        .counter {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .button {
+            font-size: 2rem;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ff0000; /* Piros szín */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #cc0000; /* Sötétebb piros hover szín */
+        }
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .subscribe-form input[type="email"] {
+            font-size: 1rem;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 250px;
+        }
+        .subscribe-form input[type="submit"] {
+            font-size: 1rem;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #ff0000; /* Piros szín */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .subscribe-form input[type="submit"]:hover {
+            background-color: #cc0000; /* Sötétebb piros hover szín */
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">0</div>
+    <button class="button" onclick="increaseCounter()">Kattints rám</button>
+
+    <div class="subscribe-form">
+        <input type="email" placeholder="Email cím" required>
+        <input type="submit" value="Feliratkozás">
+    </div>
+
+    <script>
+        let count = 0;
+
+        function increaseCounter() {
+            count++;
+            document.querySelector('.counter').textContent = count;
+        }
+    </script>
+</body>
+</html>
